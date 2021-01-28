@@ -27,18 +27,12 @@
             </h1>
             <div>
                 <ul>
-                    <?php
-                        $data = file_get_contents("frameworks.json", true);
-                        $portalPags = json_decode($data, true);
-
-                        foreach ($portalPags as $product) {
-                            echo '<pre>';
-                            print_r($product);
-                            echo '</pre>';
-                        }
+                    @foreach($portalPags as $pag)
+                        <li>
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{ $pag['link'] }}" class="underline text-gray-900 dark:text-white">{{ $pag['title'] }}</a></div>
+                        </li>
                         
-                    ?>
-
+                    @endforeach
                 </ul>
             </div>
         
