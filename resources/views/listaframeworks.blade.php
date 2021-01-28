@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Forma 2</title>
+        <title>Lista Frameworks</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,20 @@
                 Lista de Frameworks
             </h1>
             <div>
-                
+                <ul>
+                    <?php
+                        $data = file_get_contents("frameworks.json", true);
+                        $portalPags = json_decode($data, true);
+
+                        foreach ($portalPags as $product) {
+                            echo '<pre>';
+                            print_r($product);
+                            echo '</pre>';
+                        }
+                        
+                    ?>
+
+                </ul>
             </div>
         
     </body>

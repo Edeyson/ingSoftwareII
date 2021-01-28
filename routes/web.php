@@ -35,6 +35,7 @@ Route::get('formaIV', function () {
     return view('formaIV', compact(['name', 'id']));
 });
 
+
 Route::get('listaframeworks', function () {
-    return view('listaframeworks');
+       return view('listaframeworks');
 });
