@@ -16,3 +16,25 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('formaII', function () {
+    $name = "Edeyson Bermeo";
+    $id = 1002860585;
+    return view('formaII')->with(['name' => $name, 'id' => $id]);
+});
+
+Route::get('formaIII', function () {
+    $name = "Edeyson Bermeo";
+    $id = 1002860585;
+    return view('formaIII', ['name' => $name, 'id' => $id]);
+});
+
+Route::get('formaIV', function () {
+    $name = "Edeyson Bermeo";
+    $id = 1002860585;
+    return view('formaIV', compact(['name', 'id']));
+});
+
+Route::get('listaframeworks', function () {
+    return view('listaframeworks');
+});
